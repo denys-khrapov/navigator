@@ -1,0 +1,75 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+button.button,
+a.button {
+	width: fit-content;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 4px;
+	padding: 9px 12px;
+	font-family: $fontFamily;
+	font-size: 10px;
+	line-height: 140%;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--navigator-color-palette-amazon-skyline-50);
+	border-radius: 2px;
+	transition: background 0.3s ease 0s;
+	cursor: pointer;
+
+	@media (min-width: $pc) {
+		font-size: $fontSize;
+		padding: 15px 24px;
+		column-gap: 6px;
+
+		&--icons {
+			padding: 12px 24px;
+		}
+	}
+
+	&--icons {
+		padding: 8px 12px;
+	}
+
+	&--main {
+		background: var(--navigator-color-palette-goldendriedfruit-source);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: var(--navigator-color-palette-goldendriedfruit-300);
+		}
+	}
+	&:active {
+		background: var(--navigator-color-palette-amazon-skyline-800);
+	}
+
+	&.blocked {
+		background: var(--navigator-color-palette-amazon-skyline-100);
+		color: var(--navigator-color-palette-amazon-skyline-200);
+		pointer-events: none;
+
+		svg {
+			path {
+				fill: var(--navigator-color-palette-amazon-skyline-200);
+			}
+		}
+	}
+
+	&--secondary {
+		background: var(--navigator-color-palette-amazon-skyline-900);
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--navigator-color-palette-amazon-skyline-600);
+			}
+		}
+		&:active {
+			background: var(--navigator-color-palette-amazon-skyline-source);
+		}
+	}
+
+	&.blocked:focus {
+		outline: none;
+	}
+}

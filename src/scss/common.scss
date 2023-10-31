@@ -1,0 +1,104 @@
+//==== Message styles=============================================================================================
+
+.message {
+	padding: 8px 0;
+	background: var(--navigator-color-palette-amazon-skyline-source);
+	// .message__container
+	&__container {
+		padding: 0 16px;
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+		@media (min-width: $pc) {
+			justify-content: center;
+			padding: 0 52px;
+		}
+	}
+	// .message__content
+	&__content {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 16px;
+		row-gap: 4px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			justify-content: center;
+		}
+	}
+	// .message__left-col
+	&__left-col {
+		min-width: 256px;
+		max-width: 310px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			max-width: none;
+			flex: none;
+		}
+	}
+	// .message__text-holder
+	&__text-holder {
+		color: var(--navigator-color-palette-amazon-skyline-50);
+		font-size: 10px;
+		display: flex;
+		column-gap: 8px;
+		align-items: center;
+		span {
+			font-size: 18px;
+		}
+	}
+	// .message__right-col
+	&__right-col {
+		min-width: 190px;
+		max-width: 190px;
+		flex: 1 0 0;
+		display: flex;
+		column-gap: 8px;
+		align-items: center;
+		@media (min-width: $pc) {
+			max-width: none;
+			flex: none;
+		}
+		span {
+			color: var(--navigator-color-palette-amazon-skyline-500);
+			font-size: 10px;
+		}
+		a {
+			color: var(--navigator-color-palette-goldendriedfruit-400);
+			font-size: 10px;
+			font-weight: 600;
+			text-transform: uppercase;
+			text-decoration: underline;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--navigator-color-palette-goldendriedfruit-source);
+				}
+			}
+			&:active {
+				color: var(--navigator-color-palette-amazon-skyline-600);
+			}
+		}
+	}
+	// .message__close
+	&__close {
+		._icon-Minus {
+			font-size: 24px;
+			color: #fff;
+		}
+	}
+	.icon-before {
+		line-height: 100%;
+		display: block;
+		@media (min-width: $pc) {
+			display: none;
+		}
+	}
+	.icon-after {
+		line-height: 100%;
+		display: none;
+		@media (min-width: $pc) {
+			display: block;
+		}
+	}
+}
