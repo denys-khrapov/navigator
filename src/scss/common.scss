@@ -102,3 +102,51 @@
 		}
 	}
 }
+
+.card {
+	border-radius: 8px;
+	border: 1px solid var(--navigator-color-palette-amazon-resin-100);
+	background: var(--additional-colors-100-white);
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+	@media (min-width: $pc) {
+		border-radius: 16px;
+	}
+}
+
+.badge {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	border-radius: 99px;
+	font-size: 10px;
+}
+
+.link {
+	transition: color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--navigator-color-palette-goldendriedfruit-400);
+		}
+	}
+	&:active {
+		color: var(--navigator-color-palette-goldendriedfruit-source);
+	}
+
+	&.blocked {
+		color: var(--navigator-color-palette-amazon-resin-200);
+		pointer-events: none;
+
+		svg {
+			path {
+				fill: var(--navigator-color-palette-amazon-resin-200);
+			}
+		}
+	}
+
+	&.blocked:focus {
+		outline: none;
+	}
+}
