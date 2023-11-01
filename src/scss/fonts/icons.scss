@@ -7,7 +7,9 @@
 }
 
 [class^="_icon-"]::before,
-[class*=" _icon-"]::before {
+[class*=" _icon-"]::before,
+[class^="_icon-"]::after,
+[class*=" _icon-"]::after {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "icons" !important;
 	speak: never;
@@ -52,7 +54,7 @@
 ._icon-CaretLeft:before {
 	content: "\e909";
 }
-._icon-CaretRight:before {
+._icon-CaretRight:after {
 	content: "\e90a";
 }
 ._icon-ChartBar:before {
