@@ -24,6 +24,26 @@ jQuery(document).ready(function ($) {
          },
       });
 
+
+		let swiperTeam = new Swiper(".slider-team", {
+         slidesPerView: 'auto',
+         spaceBetween: 16,
+         loop: false,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			 },
+			 navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			 },
+         breakpoints: {
+            1280: {
+               spaceBetween: 48,
+            },
+         },
+      });
+
    }
 
 
