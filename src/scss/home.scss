@@ -529,6 +529,72 @@
 	}
 }
 
+//==== Services styles=============================================================================================
+.services {
+	padding: 64px 0;
+	@media (min-width: $pc) {
+		padding: 128px 0;
+	}
+	// .services__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 64px;
+	}
+
+	// .services__subtitle
+	&__subtitle {
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+
+	// .services__content
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		column-gap: 16px;
+		row-gap: 32px;
+		@media (min-width: $pc) {
+			gap: 24px;
+		}
+	}
+	// .services__card
+	&__card {
+		width: 100%;
+		min-width: 256px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			min-width: 376px;
+		}
+	}
+	// .services__list
+	&__list {
+		width: 100%;
+		min-width: 256px;
+		flex: 1 0 0;
+	}
+}
+.header-services {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 24px;
+	// .header-services__right-col
+	&__right-col {
+		min-width: 256px;
+		max-width: 576px;
+		align-items: flex-start;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			flex: none;
+			max-width: 540px;
+		}
+	}
+}
+
 //==== CTA styles=============================================================================================
 .cta {
 	padding: 64px 0 32px;
@@ -789,9 +855,6 @@
 			}
 		}
 	}
-}
-
-._icon-CaretRight {
 }
 
 //==== Text-image styles=============================================================================================
