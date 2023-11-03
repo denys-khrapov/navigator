@@ -36,3 +36,41 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+.swiper-pagination {
+	width: fit-content !important;
+	padding: 0 16px;
+	position: static;
+	display: flex;
+	justify-content: center;
+	column-gap: 6px;
+	.swiper-pagination-bullet {
+		background: var(--navigator-color-palette-amazon-skyline-100);
+		margin: 0 !important;
+	}
+	.swiper-pagination-bullet-active {
+		background: var(--navigator-color-palette-goldendriedfruit-source);
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	position: static;
+	margin-top: 0;
+	height: auto;
+	color: var(--navigator-color-palette-amazon-resin-source);
+	&::before {
+		font-size: 16px;
+	}
+	&::after {
+		content: "";
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--navigator-color-palette-goldendriedfruit-400);
+		}
+	}
+	&:active {
+		color: var(--navigator-color-palette-goldendriedfruit-source);
+	}
+}
