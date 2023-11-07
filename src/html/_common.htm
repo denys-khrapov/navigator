@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Navigator"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="breadcrumbs" id="breadcrumbs-section">
+				<div class="breadcrumbs__container container">
+					<div class="breadcrumbs__list">
+						<span>
+							<span>
+								<a class="link _icon-HouseLine" href="/"></a>
+							</span>
+							<span class="brDevider">|</span>
+							<span aria-current="page"><a class="link" href="#">Our Team</a></span>
+							<span class="brDevider">|</span>
+							<span aria-current="page">Oleg Zaidiner</span>
+						</span>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

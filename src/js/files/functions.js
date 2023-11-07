@@ -667,7 +667,7 @@ export function customCursor(isShadowTrue) {
 export function FLS(message) {
 	setTimeout(() => {
 		if (window.FLS) {
-			console.log(message);
+			// console.log(message);
 		}
 	}, 0);
 }

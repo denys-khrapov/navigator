@@ -45,6 +45,7 @@
 	justify-content: center;
 	column-gap: 6px;
 	.swiper-pagination-bullet {
+		opacity: 1;
 		background: var(--navigator-color-palette-amazon-skyline-100);
 		margin: 0 !important;
 	}

@@ -17,7 +17,6 @@ a.button {
 	border-radius: 2px;
 	transition: background 0.3s ease 0s;
 	cursor: pointer;
-
 	@media (min-width: $pc) {
 		font-size: $fontSize;
 		padding: 15px 24px;
@@ -27,9 +26,16 @@ a.button {
 			padding: 12px 24px;
 		}
 	}
+	&::after,
+	&::before {
+		font-size: 16px;
+		@media (min-width: $pc) {
+			font-size: 24px;
+		}
+	}
 
 	&--icons {
-		padding: 8px 12px;
+		padding: 8px 24px;
 	}
 
 	&--main {
@@ -59,6 +65,7 @@ a.button {
 
 	&--secondary {
 		background: var(--navigator-color-palette-amazon-skyline-900);
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: var(--navigator-color-palette-amazon-skyline-600);
@@ -74,6 +81,7 @@ a.button {
 		color: var(--navigator-color-palette-amazon-skyline-700);
 		font-weight: 500;
 		text-transform: none;
+		font-size: 10px;
 		@media (any-hover: hover) {
 			&:hover {
 				background: var(--navigator-color-palette-amazon-skyline-100);
@@ -81,6 +89,34 @@ a.button {
 		}
 		&:active {
 			background: var(--navigator-color-palette-amazon-skyline-200);
+		}
+	}
+
+	&--radius {
+		border-radius: 99px;
+		background: var(--additional-colors-teal);
+		padding: 8px 16px 8px 8px;
+		column-gap: 8px;
+		text-transform: none;
+		font-weight: 500;
+		font-size: $fontSize;
+		&::before {
+			border-radius: 50%;
+			background: var(--navigator-color-palette-amazon-resin-50);
+			color: var(--additional-colors-teal);
+			padding: 3px;
+			font-size: 12px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		@media (min-width: $pc) {
+			padding: 8px 16px 8px 8px;
+			&::before {
+				width: 26px;
+				height: 26px;
+				font-size: 18px;
+			}
 		}
 	}
 

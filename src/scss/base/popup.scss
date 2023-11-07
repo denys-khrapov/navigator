@@ -33,7 +33,11 @@ body::after {
 }
 .popup_show .popup__content {
 	visibility: visible;
-	transform: scale(1);
+	transform: translateX(0);
+	opacity: 1;
+	@media (min-width: $pc) {
+		transform: translateY(0);
+	}
 }
 .popup__wrapper {
 	display: flex;
@@ -44,17 +48,24 @@ body::after {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
+	@media (min-width: $pc) {
+		align-items: center;
+	}
 }
 .popup__content {
 	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all 0.3s ease 0s;
 	background-color: #eee;
 	padding: 20px;
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;
+	@media (min-width: $pc) {
+		transform: translateY(-100%);
+	}
 	.lock & {
 		visibility: visible;
 	}

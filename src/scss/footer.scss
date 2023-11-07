@@ -1,6 +1,6 @@
 //==== Footer styles=============================================================================================
 .footer {
-	padding: 96px 0 64px;
+	padding: 96px 0 61px;
 	position: relative;
 	// .footer__container
 	&__container {
@@ -14,7 +14,8 @@
 	// .footer__content
 	&__content {
 		display: flex;
-		column-gap: 48px;
+		flex-wrap: wrap;
+		gap: 48px;
 		@media (min-width: $pc) {
 			column-gap: 124px;
 		}
@@ -47,7 +48,7 @@
 	// .footer__form
 	&__form {
 		&:not(:last-child) {
-			margin-bottom: 32px;
+			margin-bottom: 30px;
 		}
 		@media (min-width: $pc) {
 			&:not(:last-child) {
@@ -64,10 +65,16 @@
 
 	// .footer__box
 	&__box {
-		padding: 16px 0;
+		padding: 16px 0 14px;
 		position: relative;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
 		@media (min-width: $pc) {
 			padding: 32px 0;
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
 		}
 		&::before {
 			content: "";
@@ -88,10 +95,13 @@
 			background: var(--navigator-color-palette-amazon-skyline-300);
 		}
 	}
+
 	// .footer__mail-box
 	&__mail-box {
 		display: flex;
-		column-gap: 16px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 16px;
 		.button {
 			&._icon-ChatText {
 				&::before {
@@ -102,11 +112,12 @@
 				}
 			}
 			@media (min-width: $pc) {
-				padding: 12px 24px;
+				padding: 12px 24px 12px 18px;
 			}
 		}
 		@media (min-width: $pc) {
 			column-gap: 32px;
+			justify-content: unset;
 		}
 	}
 	// .footer__mail
@@ -118,17 +129,19 @@
 		display: flex;
 		align-items: center;
 		column-gap: 8px;
-		&._icon-Envelope {
-			&::before {
-				font-size: 25px;
-				@media (min-width: $pc) {
-					font-size: 32px;
-				}
-			}
+		&::before {
+			font-size: 32px;
 		}
 		@media (min-width: $pc) {
 			font-size: 31px;
 			line-height: 1.3;
+		}
+	}
+
+	// .footer__social-bar
+	&__social-bar {
+		@media (min-width: $pc) {
+			display: none;
 		}
 	}
 	// .footer__right-col
@@ -136,7 +149,8 @@
 		min-width: 256px;
 		flex: 1 0 0;
 		display: flex;
-		column-gap: 16px;
+		flex-wrap: wrap;
+		gap: 16px;
 		@media (min-width: $pc) {
 			gap: 24px;
 		}
@@ -196,6 +210,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 4px 4px 4px 16px;
+		@media (min-width: $pc) {
+			padding: 8px 8px 8px 24px;
+		}
 	}
 	// .form__input-holder
 	&__input-holder {
@@ -210,12 +227,19 @@
 			}
 		}
 	}
+	.button {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		@media (min-width: $pc) {
+			padding: 12px 24px;
+		}
+	}
 }
 
 .services-footer {
 	display: flex;
 	flex-direction: column;
-	row-gap: 16px;
+	row-gap: 13px;
 	@media (min-width: $pc) {
 		row-gap: 48px;
 	}
@@ -223,7 +247,12 @@
 	// .services-footer__subtitle
 	&__subtitle {
 		&:not(:last-child) {
-			margin-bottom: 8px;
+			margin-bottom: 4px;
+		}
+		@media (min-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
 		}
 	}
 	// .services-footer__list
@@ -283,11 +312,13 @@
 .copyright-footer {
 	display: flex;
 	align-items: flex-start;
-	column-gap: 16px;
+	flex-wrap: wrap;
+	gap: 16px;
 	position: relative;
 	padding-left: 16px;
 	@media (min-width: $pc) {
 		column-gap: 24px;
+		align-items: center;
 	}
 	&::before {
 		content: "";

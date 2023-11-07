@@ -8,19 +8,38 @@
 }
 // Спойлер
 .spollers__item {
-	font-size: toRem(20);
+	color: var(--navigator-color-palette-amazon-resin-source);
+	font-weight: 500;
 }
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
+	width: fit-content;
+	cursor: pointer;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
 	position: relative;
 	list-style: none;
+
+	@media (min-width: $pc) {
+		display: flex;
+		align-items: center;
+		column-gap: 4px;
+		&::after {
+			display: block;
+			font-size: 16px;
+			transition: all 0.3s ease 0s;
+		}
+		&.active {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
 	&::marker {
+		display: none;
+	}
+	::-webkit-details-marker {
+		display: none;
 	}
 	._spoller-init & {
 		cursor: pointer;
@@ -28,12 +47,12 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
+			right: -20px;
 			top: 50%;
 			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
+			height: 1px;
+			width: 8px;
+			transition: all 0.5s ease 0s;
 		}
 		&::before {
 			transform: translate(-75%, -50%) rotate(40deg);
@@ -44,9 +63,11 @@
 		&._spoller-active {
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
+				background-color: var(--navigator-color-palette-goldendriedfruit-source);
 			}
 			&::after {
 				transform: rotate(40deg);
+				background-color: var(--navigator-color-palette-goldendriedfruit-source);
 			}
 		}
 		/*
@@ -86,7 +107,12 @@
 }
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	padding-left: 24px;
+	padding-top: 24px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	@media (min-width: $pc) {
+		display: none;
+	}
 }
