@@ -22,15 +22,6 @@
 			row-gap: 8px;
 		}
 	}
-	// .our-team__subtitle
-	&__subtitle {
-	}
-	// .our-team__title
-	&__title {
-	}
-	// .our-team__two-column
-	&__two-column {
-	}
 	// .our-team__cards
 	&__cards {
 		display: flex;
@@ -55,20 +46,6 @@
 					padding: 16px;
 				}
 			}
-			// .slide-team__image-holder
-			&__image-holder {
-			}
-			// .slide-team__name
-			&__name {
-				// overflow-wrap: anywhere;
-				// word-wrap: normal;
-			}
-			// .slide-team__position
-			&__position {
-			}
-			// .slide-team__link
-			&__link {
-			}
 		}
 	}
 }
@@ -77,15 +54,8 @@
 .cta-join {
 	padding: 128px 0;
 	position: relative;
-	// .cta-join__container
-	&__container {
-	}
-	// .cta-join__card
-	&__card {
-	}
 }
-.container {
-}
+
 .card-cta {
 	border-radius: 4px;
 	background: var(--navigator-color-palette-amazon-resin-source);
@@ -137,9 +107,7 @@
 			line-height: 1.3;
 		}
 	}
-	// .card-cta__text-holder
-	&__text-holder {
-	}
+
 	// .card-cta__description
 	&__description {
 		color: var(--additional-colors-100-white);

@@ -1,0 +1,122 @@
+//==== Profile hero styles=============================================================================================
+.profile-hero {
+	padding: 64px 0;
+	@media (min-width: $pc) {
+		padding: 64px 0 128px;
+	}
+	// .profile-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		@media (min-width: $pc) {
+			row-gap: 64px;
+		}
+	}
+	// .profile-hero__header
+	&__header {
+	}
+	// .profile-hero__subtitle
+	&__subtitle {
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+		@media (min-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+	// .profile-hero__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+		@media (min-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+	// .profile-hero__position
+	&__position {
+		color: var(--navigator-color-palette-amazon-skyline-700);
+	}
+	// .profile-hero__two-column
+	&__two-column {
+	}
+	// .profile-hero__certificates
+	&__certificates {
+	}
+	.two-column {
+		column-gap: 48px;
+		@media (min-width: $pc) {
+			column-gap: 24px;
+		}
+		// .two-column__left-col
+		&__left-col {
+			@media (min-width: $pc) {
+				flex: none;
+				width: 100%;
+				max-width: 476px;
+			}
+		}
+		// .two-column__image-holder
+		&__image-holder {
+			height: 476px;
+			@media (min-width: $pc) {
+				height: 676px;
+			}
+		}
+		// .two-column__right-col
+		&__right-col {
+			row-gap: 16px;
+			@media (min-width: $pc) {
+				row-gap: 32px;
+			}
+		}
+		// .two-column__text-block
+		&__text-block {
+		}
+		// .two-column__title
+		&__title {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+		// .two-column__text-holder
+		&__text-holder {
+		}
+		// .two-column__subtitle
+		&__subtitle {
+			@media (min-width: $pc) {
+				line-height: 1.5;
+			}
+		}
+		// .two-column__social-links
+		&__social-links {
+		}
+	}
+	.text-block {
+		padding: 32px 24px;
+		background: var(--additional-colors-back-for-accent);
+		// .text-block__text-holder
+		&__text-holder {
+		}
+	}
+}
+
+.card {
+	// .card__inner
+	&__inner {
+	}
+	// .card__image-holder
+	&__image-holder {
+	}
+	// .card__title
+	&__title {
+	}
+	// .card__text-holder
+	&__text-holder {
+	}
+}
