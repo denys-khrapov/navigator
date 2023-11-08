@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
 
 		let swiperTeam = new Swiper(".slider-team", {
          slidesPerView: 'auto',
-         spaceBetween: 16,
+         spaceBetween: 0,
          loop: false,
 			scrollbar: {
 				el: '.swiper-scrollbar',

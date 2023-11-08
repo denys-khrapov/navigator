@@ -1504,12 +1504,14 @@
 			}
 			&::before {
 				content: "";
-				width: 100vw;
+				// width: 100vw;
+				width: 100%;
 				position: absolute;
 				height: 100%;
 				background-color: #fff;
 				top: 0;
-				left: -100vw;
+				// left: -100vw;
+				left: -100%;
 				z-index: 2;
 			}
 		}
@@ -1647,6 +1649,28 @@
 	background: var(--additional-colors-back-for-accent);
 	text-align: center;
 	transition: all 0.3s ease 0s;
+	display: block;
+	margin-right: 16px;
+	@media (any-hover: hover) {
+		&:hover {
+			span {
+				color: var(--navigator-color-palette-goldendriedfruit-source);
+			}
+		}
+	}
+
+	&:active {
+		span {
+			color: var(--navigator-color-palette-amazon-skyline-600);
+		}
+	}
+	&.blocked {
+		pointer-events: none;
+		span {
+			color: var(--navigator-color-palette-amazon-resin-200);
+		}
+	}
+
 	@media (min-width: $pc) {
 		position: relative;
 		max-width: 176px;
@@ -1748,19 +1772,19 @@
 		text-transform: uppercase;
 		text-decoration: underline;
 		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--navigator-color-palette-goldendriedfruit-source);
-			}
-		}
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		color: var(--navigator-color-palette-goldendriedfruit-source);
+		// 	}
+		// }
 
-		&:active {
-			color: var(--navigator-color-palette-amazon-skyline-600);
-		}
-		&.blocked {
-			color: var(--navigator-color-palette-amazon-resin-200);
-			pointer-events: none;
-		}
+		// &:active {
+		// 	color: var(--navigator-color-palette-amazon-skyline-600);
+		// }
+		// &.blocked {
+		// 	color: var(--navigator-color-palette-amazon-resin-200);
+		// 	pointer-events: none;
+		// }
 	}
 }
 //==== News-podcast styles=============================================================================================
