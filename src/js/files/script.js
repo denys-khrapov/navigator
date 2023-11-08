@@ -166,12 +166,26 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
 document.addEventListener('DOMContentLoaded', function() {
-	let durationDisplay = document.getElementById('durationDisplay');
-	let audio = document.getElementById('audioElement');
-	let playPauseButton = document.getElementById('playPauseButton');
+	let players = document.querySelectorAll('.audioPlayer');
  
-	if (durationDisplay && audio && playPauseButton) {
-		function formatTime(seconds) {
+	function pauseAllOtherAudios(currentAudio) {
+	  players.forEach(function(player) {
+		 let audio = player.querySelector('.audioElement');
+		 if (audio !== currentAudio) {
+			audio.pause();
+			audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.add("_icon-Play");
+			audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.remove("_icon-Pause");
+		 }
+	  });
+	}
+ 
+	players.forEach(function(player) {
+	  let durationDisplay = player.querySelector('.durationDisplay');
+	  let audio = player.querySelector('.audioElement');
+	  let playPauseButton = player.querySelector('.playPauseButton');
+	 
+	  if (durationDisplay && audio && playPauseButton) {
+		 function formatTime(seconds) {
 			let hours = Math.floor(seconds / 3600);
 			let minutes = Math.floor((seconds % 3600) / 60);
 			let secs = Math.floor(seconds % 60);
@@ -197,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  
 		 playPauseButton.onclick = function() {
 			if (audio.paused) {
+			  pauseAllOtherAudios(audio); // Пауза всех других аудио перед воспроизведением
 			  audio.play().catch(e => console.error('Play failed:', e));
 			  this.classList.remove("_icon-Play");
 			  this.classList.add("_icon-Pause");
@@ -206,7 +221,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			  this.classList.remove("_icon-Pause");
 			}
 		 };
-	}
+	  }
+	});
 
 
 
@@ -259,5 +275,5 @@ if (overlay) {
 	  iconMenu.classList.remove('_active');
 	});
  }
- 
+
 
