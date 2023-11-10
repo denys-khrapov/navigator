@@ -227,8 +227,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+	// let messageBlock = document.querySelector('.message');
+	// let messageBtnClose = document.querySelector('.close');
+
+
+	// let isMessageClosed = sessionStorage.getItem('messageClosed');
+	// if (!isMessageClosed) {
+	//  messageBlock.classList.add('show');
+	// }else{
+	// }
+
+	// messageBtnClose.addEventListener('click', function(e) {
+	// 	e.preventDefault();
+	// 	messageBlock.classList.remove('show');
+	// 	sessionStorage.setItem('messageClosed', true);
+	//  });
+
+
+
+
+
 	let messageBlock = document.querySelector('.message');
 	let messageBtnClose = document.querySelector('.close');
+	let fixedHeader = document.querySelector('.fixed-header');
+	let sidebar = document.querySelector('.sidebar');
+
 
 	let isMessageClosed = sessionStorage.getItem('messageClosed');
 	if (!isMessageClosed) {
@@ -236,11 +259,50 @@ document.addEventListener('DOMContentLoaded', function() {
 	}else{
 	}
 
+	function updateSidebarTop() {
+		let headerHeight = fixedHeader.offsetHeight; // Получаем высоту .fixed-header
+		sidebar.style.top = headerHeight + "px"; // Применяем высоту к top .sidebar
+  }
+  updateSidebarTop();
+  window.addEventListener('resize', updateSidebarTop); 
+
 	messageBtnClose.addEventListener('click', function(e) {
 		e.preventDefault();
 		messageBlock.classList.remove('show');
 		sessionStorage.setItem('messageClosed', true);
+		updateSidebarTop();
 	 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// let fixedHeader = document.querySelector('.fixed-header');
+	// let messageBtnClose = document.querySelector('.close');
+	// let sidebar = document.querySelector('.sidebar');
+
+	// function updateSidebarTop() {
+	// 	 let headerHeight = fixedHeader.offsetHeight; // Получаем высоту .fixed-header
+	// 	 sidebar.style.top = headerHeight + "px"; // Применяем высоту к top .sidebar
+	// }
+
+	// updateSidebarTop(); // Вызываем функцию при загрузке страницы
+
+	// window.addEventListener('resize', updateSidebarTop); // Обновляем top при изменении размеров окна
+
+	// messageBtnClose.addEventListener('click', function(e) {
+	// 	 e.preventDefault();
+	// 	 sessionStorage.setItem('messageClosed', true);
+	// 	 updateSidebarTop(); // Обновляем top при закрытии сообщения
+	// });
 	 
  });
  
@@ -277,3 +339,11 @@ if (overlay) {
  }
 
 
+
+
+ let rating = document.getElementsByName('rating');
+ rating.forEach((e)=>{
+	  e.addEventListener('click',function(){
+	  console.log(e.value);
+	  })
+ })

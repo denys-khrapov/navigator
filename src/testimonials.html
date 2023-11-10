@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Testimonials"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="breadcrumbs" id="breadcrumbs-section">
+				<div class="breadcrumbs__container container">
+					<div class="breadcrumbs__list">
+						<span>
+							<span>
+								<a class="link _icon-HouseLine" href="/"></a>
+							</span>
+							<span class="brDevider">|</span>
+							<span aria-current="page">Testimonials</span>
+						</span>
+					</div>
+				</div>
+			</section>
+			<div class="testimonials-wrapper">
+				<section class="text-image text-image--small" id="text-image-section">
+					<div class="text-image__container container">
+						<div class="text-image__header">
+							<h3 class="text-image__subtitle subtitle">Reviews of our customers</h3>
+							<h2 class="text-image__title title">What Our Clients Say</h2>
+						</div>
+						<div class="text-image__body">
+							<div class="text-image__left-col">
+								<div class="text-image__image-holder">
+									<img src="@img/text-image-img-small.png" width="320" height="320" alt="image">
+								</div>
+							</div>
+							<div class="text-image__right-col">
+								<div class="text-image__content">
+									<h2 class="text-image__title title">What Our Clients Say
+									</h2>
+									<div class="text-image__text-holder">
+										<p>Discover the experiences of those who have journeyed with us. Our clients' voices
+											resonate
+											with success stories, growth, and transformation.</p>
+										<p>We're proud to share their testimonials, each a testament to our commitment to
+											delivering
+											results and driving business forward. </p>
+										<p>Join the ranks of our satisfied clients and let's craft your success story together.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="others-sources" id="others-sources-section">
+					<div class="others-sources__container container">
+						<div class="others-sources__left-col">
+							<h3 class="others-sources__subtitle subtitle">other sources</h3>
+							<h2 class="others-sources__title title">Reviews on other platforms</h2>
+						</div>
+						<div class="others-sources__right-col">
+							<div class="others-sources__rating rating-hero">
+								<div class="rating-hero__item card">
+									<div class="card__inner">
+										<div class="rating-hero__img-holder">
+											<img src="@img/rating-logo-01.svg" width="57" height="10" alt="logo">
+										</div>
+										<div class="rating-hero__footer">
+											<div class="rating-hero__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<a class="rating-hero__link link" href="#">10 Reviews</a>
+										</div>
+									</div>
+								</div>
+								<div class="rating-hero__item card">
+									<div class="card__inner">
+										<div class="rating-hero__img-holder">
+											<img src="@img/rating-logo-02.svg" width="57" height="10" alt="logo">
+										</div>
+										<div class="rating-hero__footer">
+											<div class="rating-hero__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<a class="rating-hero__link link" href="#">10 Reviews</a>
+										</div>
+									</div>
+								</div>
+								<div class="rating-hero__item card">
+									<div class="card__inner">
+										<div class="rating-hero__img-holder">
+											<img src="@img/rating-logo-03.svg" width="57" height="10" alt="logo">
+										</div>
+										<div class="rating-hero__footer">
+											<div class="rating-hero__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<a class="rating-hero__link link" href="#">10 Reviews</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="sidebar-content">
+					<div class="sidebar-content__container container">
+						<div class="sidebar-content__left-col">
+							<aside class="sidebar">
+								<div class="sidebar__header">
+									<h2 class="sidebar__title">Share Your Experience!</h2>
+									<div class="sidebar__text-holder">
+										<p>Dear clients, your feedback means the world to us. We strive to provide you with the
+											best
+											services and results, and your review will help us improve even further.</p>
+										<p>
+											Please, share your thoughts about your experience working with us. We are ready to
+											listen
+											to
+											your success stories, feedback, and suggestions. Your review will inspire us to achieve
+											greater heights.
+										</p>
+										<p>
+											Leave your mark on our history by sharing your impressions. We thank you for your trust
+											and
+											collaboration.
+										</p>
+									</div>
+								</div>
+								<div class="sidebar__form">
+									<div id="note2"></div>
+									<form class="form" id="ajax-contact-form" data-form-validate="true">
+										<div class="form__inner">
+											<div class="form__input-holder form__input-holder--name">
+												<span>
+													<label for="fname">Your name</label>
+													<input id="fname" type="text" value="" name="name-client"
+														placeholder="ex. Michael Smith" required>
+												</span>
+											</div>
+											<div class="form__input-holder form__input-holder--phone">
+												<span>
+													<label for="phone">Your phone</label>
+													<input id="phone" type="tel" value="" name="phone-client"
+														placeholder="+38 (XXX) XXX XX XX">
+												</span>
+											</div>
+											<div class="form__input-holder form__input-holder--email">
+												<span>
+													<label for="email">Your email</label>
+													<input id="email" type="text" value="" name="email-client"
+														placeholder="name@gmail.com" required>
+												</span>
+											</div>
+											<div class="form__textarea-holder form__textarea-holder--feedback">
+												<span>
+													<label for="feedback">Your feedback</label>
+													<textarea name="feedback-client" id="feedback" placeholder="Write here"
+														required></textarea>
+												</span>
+											</div>
+											<div class="form__rate rate-form">
+												<h4 class="rate-form__title">Rate it</h4>
+												<div class="rating">
+													<input type="radio" id="star5" name="rating" value="5" />
+													<label class="star" for="star5"><span class="_icon-Star"></span></label>
+													<input type="radio" id="star4" name="rating" value="4" />
+													<label class="star" for="star4"><span class="_icon-Star"></span></label>
+													<input type="radio" id="star3" name="rating" value="3" />
+													<label class="star" for="star3"><span class="_icon-Star"></span></label>
+													<input type="radio" id="star2" name="rating" value="2" />
+													<label class="star" for="star2"><span class="_icon-Star"></span></label>
+													<input type="radio" id="star1" name="rating" value="1" />
+													<label class="star" for="star1"><span class="_icon-Star"></span></label>
+												</div>
+											</div>
+											<input type="hidden" name="url">
+											<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+											<div class="form__button-holder">
+												<button class="button button--main" type="submit">
+													Send
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</aside>
+						</div>
+						<div class="sidebar-content__right-col">
+							<div class="reviews">
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__text-holder">
+												<p>Working with this team has been a game-changer for our business. Their strategic
+													approach, data-driven insights, and marketing expertise have taken us to new
+													heights. We've seen remarkable growth and a consistent increase in sales, even
+													outside of our traditional peak seasons. Their dedication to our success is truly
+													commendable. Highly recommend!</p>
+											</div>
+											<div class="item-review__name">Emily Rodriguez</div>
+											<div class="item-review__position">Marketing Director</div>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__video-holder">
+											<iframe width="669" height="376" src="https://www.youtube.com/embed/wMr8LWIzbGQ"
+												title="«ШТО»" frameborder="0"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+												allowfullscreen></iframe>
+										</div>
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__badge _icon-Play">
+												Video review
+											</div>
+											<div class="item-review__text-holder">
+												<p>Working with this team has been a game-changer for our business. Their strategic
+													approach, data-driven insights, and marketing expertise have taken us to new
+													heights. We've seen remarkable growth and a consistent increase in sales, even
+													outside of our traditional peak seasons. Their dedication to our success is truly
+													commendable. Highly recommend!</p>
+											</div>
+											<div class="item-review__name">Emily Rodriguez</div>
+											<div class="item-review__position">Marketing Director</div>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__text-holder">
+												<p>With aNavigator's help, the client reached $1,400 per day in gross profit within
+													just a month and gained 60 units per day in organic sales. The team worked
+													closely with the client to further optimize their strategy and bring
+													growth-boosting results. They were communicative and attentive to detail.</p>
+											</div>
+											<div class="item-review__name">Ivan Skorokhodov</div>
+											<div class="item-review__position">Head of Marketing, TBI Pro</div>
+											<a class="item-review__link" href="#">
+												watch here
+												<svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path class="heffect"
+														d="M14.0343 14.7143C12.8297 15.9667 11.1934 16.6453 9.47152 16.6453C5.94227 16.6453 3.37613 13.8445 3.37613 10C3.37613 6.13802 5.94227 3.33713 9.47152 3.33713C11.1767 3.33713 12.7948 4.01495 14.0177 5.25054L14.4993 5.73789L16.6171 3.59801L16.1522 3.11066C14.3963 1.28368 12.0202 0.292969 9.47152 0.292969C4.2719 0.292969 0.363281 4.46789 0.363281 10.0168C0.363281 15.549 4.28933 19.7071 9.47152 19.7071C12.0377 19.7071 14.4137 18.6988 16.1696 16.8718L16.6345 16.3845L14.5341 14.2102L14.0343 14.7143Z"
+														fill="#727272" />
+													<path
+														d="M9.71698 5.94043C10.7826 5.94043 11.8045 6.36813 12.558 7.12944C13.3115 7.89075 13.7348 8.92331 13.7348 9.99996C13.7348 11.0766 13.3115 12.1092 12.558 12.8705C11.8045 13.6318 10.7826 14.0595 9.71698 14.0595C8.65141 14.0595 7.62947 13.6318 6.87599 12.8705C6.12252 12.1092 5.69922 11.0766 5.69922 9.99996C5.69922 8.92331 6.12252 7.89075 6.87599 7.12944C7.62947 6.36813 8.65141 5.94043 9.71698 5.94043Z"
+														fill="#FF3D2E" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__text-holder">
+												<p>aNavigator provided great help in improving my Amazon product and advertising
+													strategies.</p>
+												<p>They knоws a lot about this stuff and it really helped me sell more. They
+													gave me suggestions to make my product listing better and improve the keywords.
+												</p>
+												<p>They also gave me good ideas for making my ads more appealing and using Amazon's
+													advertising tools effectively. aNavigator team is very professional and
+													responsive. I definitely recommend their amazing help for improving Amazon
+													products and advertising.</p>
+											</div>
+											<div class="item-review__name">Iryna Gorbachova</div>
+											<div class="item-review__position">Marketing Director</div>
+											<a class="item-review__link" href="#">
+												watch here
+												<svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_823_21036)">
+														<rect width="16" height="16" transform="translate(0.5)" fill="white" />
+														<path
+															d="M-1.5 2.44419V8.78402H3.31591V5.08313L-1.5 2.44419ZM6.09091 5.08313V8.78402H10.9091V2.44419L6.09091 5.08313ZM13.6841 0.926455V8.78402H18.5V-1.71021L13.6841 0.926455Z"
+															fill="#3F97BA" />
+														<path class="heffect"
+															d="M-1.5 11.3728H3.31591V17.7104H-1.5V11.3728ZM6.09091 11.3728H10.9068V17.7104H6.09091V11.3728ZM13.6841 11.3728H18.5V17.7104H13.6841V11.3728Z"
+															fill="#727272" />
+													</g>
+													<defs>
+														<clipPath id="clip0_823_21036">
+															<rect width="16" height="16" fill="white" transform="translate(0.5)" />
+														</clipPath>
+													</defs>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__text-holder">
+												<p>With aNavigator's help, the client reached $1,400 per day in gross profit within
+													just a month and gained 60 units per day in organic sales. The team worked
+													closely with the client to further optimize their strategy and bring
+													growth-boosting results. They were communicative and attentive to detail.</p>
+											</div>
+											<div class="item-review__name">Ivan Skorokhodov</div>
+											<div class="item-review__position">Head of Marketing, TBI Pro</div>
+											<a class="item-review__link" href="#">
+												watch here
+												<svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path class="heffect"
+														d="M14.0343 14.7143C12.8297 15.9667 11.1934 16.6453 9.47152 16.6453C5.94227 16.6453 3.37613 13.8445 3.37613 10C3.37613 6.13802 5.94227 3.33713 9.47152 3.33713C11.1767 3.33713 12.7948 4.01495 14.0177 5.25054L14.4993 5.73789L16.6171 3.59801L16.1522 3.11066C14.3963 1.28368 12.0202 0.292969 9.47152 0.292969C4.2719 0.292969 0.363281 4.46789 0.363281 10.0168C0.363281 15.549 4.28933 19.7071 9.47152 19.7071C12.0377 19.7071 14.4137 18.6988 16.1696 16.8718L16.6345 16.3845L14.5341 14.2102L14.0343 14.7143Z"
+														fill="#727272" />
+													<path
+														d="M9.71698 5.94043C10.7826 5.94043 11.8045 6.36813 12.558 7.12944C13.3115 7.89075 13.7348 8.92331 13.7348 9.99996C13.7348 11.0766 13.3115 12.1092 12.558 12.8705C11.8045 13.6318 10.7826 14.0595 9.71698 14.0595C8.65141 14.0595 7.62947 13.6318 6.87599 12.8705C6.12252 12.1092 5.69922 11.0766 5.69922 9.99996C5.69922 8.92331 6.12252 7.89075 6.87599 7.12944C7.62947 6.36813 8.65141 5.94043 9.71698 5.94043Z"
+														fill="#FF3D2E" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item item-review">
+									<div class="item-review__inner">
+										<div class="item-review__header">
+											<div class="item-review__star-holder star-holder">
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+												<span class="_icon-Star"></span>
+											</div>
+											<div class="item-review__date">October 8, 2023</div>
+										</div>
+										<div class="item-review__content">
+											<div class="item-review__text-holder">
+												<p>aNavigator provided great help in improving my Amazon product and advertising
+													strategies.</p>
+												<p>They knоws a lot about this stuff and it really helped me sell more. They
+													gave me suggestions to make my product listing better and improve the keywords.
+												</p>
+												<p>They also gave me good ideas for making my ads more appealing and using Amazon's
+													advertising tools effectively. aNavigator team is very professional and
+													responsive. I definitely recommend their amazing help for improving Amazon
+													products and advertising.</p>
+											</div>
+											<div class="item-review__name">Iryna Gorbachova</div>
+											<div class="item-review__position">Marketing Director</div>
+											<a class="item-review__link" href="#">
+												watch here
+												<svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_823_21036)">
+														<rect width="16" height="16" transform="translate(0.5)" fill="white" />
+														<path
+															d="M-1.5 2.44419V8.78402H3.31591V5.08313L-1.5 2.44419ZM6.09091 5.08313V8.78402H10.9091V2.44419L6.09091 5.08313ZM13.6841 0.926455V8.78402H18.5V-1.71021L13.6841 0.926455Z"
+															fill="#3F97BA" />
+														<path class="heffect"
+															d="M-1.5 11.3728H3.31591V17.7104H-1.5V11.3728ZM6.09091 11.3728H10.9068V17.7104H6.09091V11.3728ZM13.6841 11.3728H18.5V17.7104H13.6841V11.3728Z"
+															fill="#727272" />
+													</g>
+													<defs>
+														<clipPath id="clip0_823_21036">
+															<rect width="16" height="16" fill="white" transform="translate(0.5)" />
+														</clipPath>
+													</defs>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pagination container">
+						<div class="wp-pagenavi" role="navigation">
+							<a class="previouspostslink _icon-CaretLeft blocked page-nav-link" rel="prev"
+								aria-label="Prev page" href="#">
+								<span class="prevEn">Prev</span>
+							</a>
+							<!-- <a class="page smaller page-nav-link" title="Page 2" href="#">2</a> -->
+							<span aria-current="page" class="current page-nav-link">1</span>
+							<a class="page larger page-nav-link" title="Page 2" href="#">2</a>
+							<a class="page larger page-nav-link" title="Page 3" href="#">3</a>
+							<a class="page larger page-nav-link" title="Page 4" href="#">4</a>
+							<a class="nextpostslink _icon-CaretRight page-nav-link" rel="next" aria-label="Next page" href="#">
+								<span class="nextEn">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
