@@ -37,6 +37,14 @@
 			max-width: 276px;
 		}
 	}
+	.hero-two-column__description {
+		margin-top: 16px;
+		@media (min-width: $pc) {
+			&::before {
+				display: block;
+			}
+		}
+	}
 }
 
 .two-column {
