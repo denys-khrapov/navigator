@@ -935,8 +935,12 @@
 	// .two-column__title
 	&__title {
 	}
+	// .two-column__subtext
+	&__subtext {
+	}
 	// .two-column__hero
 	&__hero {
+		color: var(--navigator-color-palette-amazon-skyline-700);
 	}
 
 	// .two-column__cards
@@ -964,6 +968,9 @@
 				}
 			}
 		}
+	}
+	// .two-column__links
+	&__links {
 	}
 }
 
