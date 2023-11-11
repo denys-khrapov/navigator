@@ -8,43 +8,41 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="breadcrumbs" id="breadcrumbs-section">
-				<div class="breadcrumbs__container container">
-					<div class="breadcrumbs__list">
-						<span>
+			<div class="testimonials-page">
+				<section class="breadcrumbs" id="breadcrumbs-section">
+					<div class="breadcrumbs__container container">
+						<div class="breadcrumbs__list">
 							<span>
-								<a class="link _icon-HouseLine" href="/"></a>
+								<span>
+									<a class="link _icon-HouseLine" href="/"></a>
+								</span>
+								<span class="brDevider">|</span>
+								<span aria-current="page">Testimonials</span>
 							</span>
-							<span class="brDevider">|</span>
-							<span aria-current="page">Testimonials</span>
-						</span>
-					</div>
-				</div>
-			</section>
-			<div class="testimonials-wrapper">
-				<section class="text-image text-image--small" id="text-image-section">
-					<div class="text-image__container container">
-						<div class="text-image__header">
-							<h3 class="text-image__subtitle subtitle">Reviews of our customers</h3>
-							<h2 class="text-image__title title">What Our Clients Say</h2>
 						</div>
-						<div class="text-image__body">
-							<div class="text-image__left-col">
-								<div class="text-image__image-holder">
+					</div>
+				</section>
+				<section class="two-column" id="two-column-section">
+					<div class="two-column__container container">
+						<div class="two-column__header">
+							<h3 class="two-column__subtitle subtitle">Reviews of our customers</h3>
+							<h2 class="two-column__title title">What Our Clients Say</h2>
+						</div>
+						<div class="two-column__hero hero-two-column hero-two-column--center">
+							<div class="hero-two-column__left-col">
+								<div class="hero-two-column__image-holder">
 									<img src="@img/text-image-img-small.png" width="320" height="320" alt="image">
 								</div>
 							</div>
-							<div class="text-image__right-col">
-								<div class="text-image__content">
-									<h2 class="text-image__title title">What Our Clients Say
-									</h2>
-									<div class="text-image__text-holder">
+							<div class="hero-two-column__right-col">
+								<div class="hero-two-column__text-block">
+									<h3 class="hero-two-column__title">What Our Clients Say
+									</h3>
+									<div class="hero-two-column__description">
 										<p>Discover the experiences of those who have journeyed with us. Our clients' voices
-											resonate
-											with success stories, growth, and transformation.</p>
+											resonate with success stories, growth, and transformation.</p>
 										<p>We're proud to share their testimonials, each a testament to our commitment to
-											delivering
-											results and driving business forward. </p>
+											delivering results and driving business forward.</p>
 										<p>Join the ranks of our satisfied clients and let's craft your success story together.
 										</p>
 									</div>
@@ -142,7 +140,7 @@
 								</div>
 								<div class="sidebar__form">
 									<div id="note2"></div>
-									<form class="form" id="ajax-contact-form" data-form-validate="true">
+									<form class="form form--full" id="ajax-contact-form" data-form-validate="true">
 										<div class="form__inner">
 											<div class="form__input-holder form__input-holder--name">
 												<span>
@@ -450,8 +448,168 @@
 						</div>
 					</div>
 				</div>
-			</div>
+				<section class="news-podcast" id="news-podcast-section">
+					<div class="news-podcast__container container">
+						<div class="news-podcast__header header-news-podcast">
+							<div class="header-news-podcast__left-col">
+								<h3 class="header-news-podcast__subtitle subtitle">our activity</h3>
+								<h2 class="header-news-podcast__title title">News and podcasts</h2>
+							</div>
+							<div class="header-news-podcast__right-col">
+								<a class="header-news-podcast__link link _icon-CaretRight" href="#">GO TO FEED</a>
+							</div>
+						</div>
+						<div class="news-podcast__content">
+							<div class="news-podcast__left-col">
+								<h4 class="news-podcast__subtitle _icon-BookmarkSimple">SELECTED ARTICLE</h4>
+								<a href="#" class="news-podcast__card card-news">
+									<div class="card-news__inner">
+										<div class="card-news__image-holder">
+											<img src="@img/news-podcast-img-01.jpg" width="344" height="176" alt="image">
+										</div>
+										<div class="card-news__content">
+											<div class="card-news__header header-card-news">
+												<div class="header-card-news__left-col">
+													<div class="card-news__category _icon-Eye">blog</div>
+												</div>
+												<div class="header-card-news__right-col">
+													<div class="header-card-news__date">October 8, 2023</div>
+												</div>
+											</div>
+											<div class="card-news__title">Navigating the Complexities of Amazon Listings and
+												Seller Support: A Strategic Insight</div>
+											<div class="card-news__text-holder">
+												<p>In the multifaceted world of Amazon selling, businesses encounter a myriad of
+													challenges, particularly when it comes to managing product listings and
+													navigating
+													through the intricacies of Seller Support. This article explores the prevalent
+													issues and strategic approaches that sellers can adopt to effectively manage
+													their
+													Amazon listings and interact with Seller Support, ensuring the smooth and
+													efficient
+													operation of their online business.
+												</p>
+											</div>
+											<span class="card-news__link link _icon-CaretRight">Learn more</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="news-podcast__right-col">
+								<h4 class="news-podcast__subtitle">LATEST UPDATES</h4>
+								<div class="news-podcast__slider swiper slider-news-podcast">
+									<div class="news-podcast__wrapper swiper-wrapper">
+										<a href="#" class="news-podcast__slide swiper-slide slide-news-podcast">
+											<div class="slide-news-podcast__inner">
+												<div class="slide-news-podcast__image-holder">
+													<img src="@img/news-podcast-img-small-01.jpg" width="224" height="176"
+														alt="image">
+												</div>
+												<div class="slide-news-podcast__content">
+													<div class="slide-news-podcast__header header-slide-news-podcast">
+														<div class="header-slide-news-podcast__left-col">
+															<div class="header-slide-news-podcast__category _icon-Eye">blog</div>
+														</div>
+														<div class="header-slide-news-podcast__right-col">
+															<div class="header-slide-news-podcast__date">October 8, 2023</div>
+														</div>
 
+													</div>
+													<div class="slide-news-podcast__title">Harnessing the Power of TikTok: A
+														Comprehensive Outline to Amplifying Amazon Sales</div>
+													<div class="slide-news-podcast__text-holder">
+														<p>In the multifaceted world of Amazon selling, businesses encounter a myriad
+															of
+															challenges, particularly when it comes to managing product listings and
+															navigating through the intricacies of Seller Support. This article explores
+															the
+															prevalent issues and strategic approaches that sellers can adopt to
+															effectively
+															manage their Amazon listings and interact with Seller Support, ensuring the
+															smooth and efficient operation of their online business.
+														</p>
+													</div>
+													<span class="slide-news-podcast__link link _icon-CaretRight">Learn more</span>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="news-podcast__slide swiper-slide slide-news-podcast">
+											<div class="slide-news-podcast__inner">
+												<div class="slide-news-podcast__image-holder">
+													<img src="@img/news-podcast-img-small-02.jpg" width="224" height="176"
+														alt="image">
+												</div>
+												<div class="slide-news-podcast__content">
+													<div class="slide-news-podcast__header header-slide-news-podcast">
+														<div class="header-slide-news-podcast__left-col">
+															<div class="header-slide-news-podcast__category _icon-Eye">blog</div>
+														</div>
+														<div class="header-slide-news-podcast__right-col">
+															<div class="header-slide-news-podcast__date">October 8, 2023</div>
+														</div>
+
+													</div>
+													<div class="slide-news-podcast__title">Harnessing the Power of AI in Amazon
+													</div>
+													<div class="slide-news-podcast__text-holder">
+														<p>In the multifaceted world of Amazon selling, businesses encounter a myriad
+															of
+															challenges, particularly when it comes to managing product listings and
+															navigating through the intricacies of Seller Support. This article explores
+															the
+															prevalent issues and strategic approaches that sellers can adopt to
+															effectively
+															manage their Amazon listings and interact with Seller Support, ensuring the
+															smooth and efficient operation of their online business.
+														</p>
+													</div>
+													<span class="slide-news-podcast__link link _icon-CaretRight">Learn more</span>
+												</div>
+											</div>
+										</a>
+										<div
+											class="news-podcast__slide swiper-slide slide-news-podcast slide-news-podcast--audio">
+											<div class="slide-news-podcast__inner">
+												<div class="slide-news-podcast__header header-slide-news-podcast">
+													<div class="header-slide-news-podcast__left-col">
+														<div class="header-slide-news-podcast__category _icon-SpeakerSimpleHigh">
+															podcast
+														</div>
+													</div>
+													<div class="header-slide-news-podcast__right-col">
+														<div class="header-slide-news-podcast__date">October 8, 2023</div>
+													</div>
+
+												</div>
+												<div class="slide-news-podcast__content">
+													<div class="slide-news-podcast__title-holder">
+														<a href="#" class="slide-news-podcast__title">Amazon External Traffic with
+															Kfir
+															Abud</a>
+													</div>
+													<div class="audio-holder audio audioPlayer">
+														<audio class="audioElement" src="files/audio.mp3"></audio>
+														<button class="playPauseButton _icon-Play"></button>
+														<div class="audio__time durationDisplay">loading...</div>
+													</div>
+												</div>
+												<a href="#" class="slide-news-podcast__link link _icon-CaretRight">Learn more</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-news-podcast__nav">
+										<button type="button"
+											class="swiper-button-prev news-podcast-button-prev _icon-ArrowLeft"></button>
+										<div class="swiper-pagination news-podcast-swiper-pagination"></div>
+										<button type="button"
+											class="swiper-button-next news-podcast-button-next _icon-ArrowRight"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

@@ -1,4 +1,8 @@
 .pagination {
+	margin-top: 32px;
+	@media (min-width: $pc) {
+		margin-top: 64px;
+	}
 	a {
 		span {
 			font-size: 0;

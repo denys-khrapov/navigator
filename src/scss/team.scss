@@ -1,52 +1,7 @@
-//==== Our team styles=============================================================================================
-.our-team {
-	padding: 64px 0;
-	@media (min-width: $pc) {
-		padding: 64px 0 128px;
-	}
-	// .our-team__container
-	&__container {
-		display: flex;
-		flex-direction: column;
-		row-gap: 32px;
-		@media (min-width: $pc) {
-			row-gap: 64px;
-		}
-	}
-	// .our-team__header
-	&__header {
-		display: flex;
-		flex-direction: column;
-		row-gap: 4px;
-		@media (min-width: $pc) {
-			row-gap: 8px;
-		}
-	}
-	// .our-team__cards
-	&__cards {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 16px;
-		@media (min-width: $pc) {
-			gap: 24px;
-		}
-		.slide-team {
-			max-width: 100%;
-			min-width: 120px;
-			flex: 1 0 0;
-			@media (min-width: $pc) {
-				flex: none;
-				max-width: 176px;
-				margin-right: 0;
-			}
-			// .slide-team__inner
-			&__inner {
-				padding: 16px 10px 7px 10px;
-				@media (min-width: $pc) {
-					padding: 16px;
-				}
-			}
-		}
+.team-page {
+	.hero-two-column__image-holder {
+		max-width: 100%;
+		height: 476px;
 	}
 }
 

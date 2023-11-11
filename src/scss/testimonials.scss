@@ -1,24 +1,47 @@
 //==== Testimonials styles=============================================================================================
-.testimonials-wrapper {
-	padding: 64px 0;
-	display: flex;
-	flex-direction: column;
-	row-gap: 32px;
-	@media (min-width: $pc) {
-		padding: 64px 0 128px;
-		row-gap: 64px;
+.testimonials-page {
+	.hero-two-column__image-holder {
+		@media (min-width: $pc) {
+			height: 376px;
+			max-width: 320px;
+		}
+	}
+	.hero-two-column__left-col {
+		flex: none;
+	}
+	.two-column {
+		padding: 64px 0;
+	}
+	.hero-two-column__text-block {
+		row-gap: 28px;
+		@media (min-width: $pc) {
+			row-gap: 32px;
+		}
+	}
+	.hero-two-column {
+		column-gap: 48px;
 	}
 	.sidebar-content {
-		display: flex;
-		flex-direction: column;
-		row-gap: 32px;
+		&:not(:last-child) {
+			margin-bottom: 64px;
+		}
 		@media (min-width: $pc) {
-			row-gap: 64px;
+			&:not(:last-child) {
+				margin-bottom: 128px;
+			}
 		}
 	}
 }
 
 .others-sources {
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
+	@media (min-width: $pc) {
+		&:not(:last-child) {
+			margin-bottom: 64px;
+		}
+	}
 	// .others-sources__container
 	&__container {
 		display: flex;
@@ -240,9 +263,4 @@
 			padding: 2px 8px;
 		}
 	}
-}
-
-._icon-Star {
-}
-._icon-Play {
 }
