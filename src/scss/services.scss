@@ -1,0 +1,45 @@
+//==== Services styles=============================================================================================
+.services-archive-page {
+	.hero-two-column {
+		// flex-direction: row-reverse;
+		gap: 16px;
+		@media (min-width: $pc) {
+			gap: 24px;
+		}
+	}
+	.hero-two-column__text-block {
+		padding-right: 24px;
+		&::before {
+			right: 0;
+			left: unset;
+		}
+	}
+	.hero-two-column__description {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		&::before {
+			top: unset;
+			bottom: -16px;
+			@media (min-width: $pc) {
+				display: block;
+			}
+		}
+	}
+	.hero-two-column__right-col {
+		order: 1;
+		@media (min-width: $pc) {
+			max-width: 876px;
+			width: 100%;
+			flex: none;
+		}
+	}
+	.hero-two-column__left-col {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+		order: 2;
+		@media (min-width: $pc) {
+		}
+	}
+}

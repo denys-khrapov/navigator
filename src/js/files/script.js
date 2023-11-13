@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
 	initSubmenu();
 	closeSubmenu();
 	initSearch();
+	initSocialWidget();
 
 	function initSwiper() {
       let swiperClients = new Swiper(".slider-clients", {
@@ -110,6 +111,13 @@ jQuery(document).ready(function ($) {
 				$(".spollers__title").removeClass("active");
 		});
 	}
+
+	function initSocialWidget(){
+		$('.social-widget__button').click(function(){
+			$('.social-widget').toggleClass('active');
+	  });
+	}
+
 	
 
 	function initSearch() {
@@ -150,7 +158,12 @@ jQuery(document).ready(function ($) {
  
 	}
 	 
-
+   if ($('[data-fancybox=""]').length > 0) {
+      $('[data-fancybox=""]').fancybox({
+         autoFocus: false,
+         touch: false,
+      });
+   }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -253,6 +266,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		sessionStorage.setItem('messageClosed', true);
 		updateSidebarTop();
 	 });
+
+	  // Получаем все изображения в контейнере
+var avatarsLinksImg = document.querySelectorAll('.avatars-links img');
+
+// Устанавливаем z-index в обратном порядке их появления в DOM
+for (var i = 0; i < avatarsLinksImg.length; i++) {
+	avatarsLinksImg[i].style.zIndex = avatarsLinksImg.length - i;
+}
+
  });
  
 
@@ -262,6 +284,7 @@ const iconMenu = document.querySelector('.menu__button');
 const menuBody = document.querySelector('.menu__body');
 const closeMenuButton = document.querySelector('.menu__close');
 const overlay = document.querySelector('.overlay');
+const contactBtnMobile = document.querySelector('.menu__footer-buttons .button--main');
 
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
@@ -286,6 +309,13 @@ if (overlay) {
 	  iconMenu.classList.remove('_active');
 	});
  }
+if (contactBtnMobile) {
+	contactBtnMobile.addEventListener("click", function (e) {
+	  menuBody.classList.toggle('_active');
+	  document.body.classList.toggle('_lock');
+	  iconMenu.classList.toggle('_active');
+	});
+ }
 
 
 
@@ -295,3 +325,4 @@ if (overlay) {
 	  e.addEventListener('click',function(){
 	  })
  })
+

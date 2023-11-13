@@ -1219,8 +1219,74 @@
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
+		<div class="social-widget">
+			<div class="social-widget__left-col">
+				<a class="social-widget__link" href="#">
+					<img src="@img/facebook.svg" width="20" height="20" alt="facebook">
+				</a>
+				<a class="social-widget__link" href="#">
+					<img src="@img/spotify.svg" width="20" height="20" alt="spotify">
+				</a>
+				<a class="social-widget__link" href="#">
+					<img src="@img/youtube.svg" width="20" height="20" alt="youtube">
+				</a>
+				<a class="social-widget__link" href="#">
+					<img src="@img/linkedin.svg" width="20" height="20" alt="linkedin">
+				</a>
+				<a class="social-widget__link" href="#">
+					<img src="@img/instagram.svg" width="20" height="20" alt="instagram">
+				</a>
+			</div>
+			<div class="social-widget__right-col">
+				<div class="social-widget__button _icon-CaretUp-1 link">networks</div>
+			</div>
+		</div>
+		<div style="display: none;" id="modal-contact" class="modal-contact">
+			<div class="modal-contact__inner">
+				<div class="modal-contact__header">
+					<h2 class="modal-contact__title">Wish to boost your sales on Amazon?</h2>
+					<div class="modal-contact__text-holder">
+						<p>Please leave your contact information, and our Amazon marketing expert will get in touch with you
+							shortly to discuss your needs and develop a success strategy.</p>
+					</div>
+				</div>
+				<div class="modal-contact__form-holder">
+					<div id="note3"></div>
+					<form class="form form--full" id="ajax-contact-form" data-form-validate="true">
+						<div class="form__inner">
+							<div class="form__input-holder form__input-holder--name">
+								<span>
+									<label for="fname">Your name</label>
+									<input id="fname" type="text" value="" name="name-client" placeholder="ex. Michael Smith"
+										required>
+								</span>
+							</div>
+							<div class="form__input-holder form__input-holder--email">
+								<span>
+									<label for="email">Your email</label>
+									<input id="email" type="text" value="" name="email-client" placeholder="name@gmail.com"
+										required>
+								</span>
+							</div>
+							<div class="form__input-holder form__input-holder--phone">
+								<span>
+									<label for="phone">Your phone</label>
+									<input id="phone" type="tel" value="" name="phone-client" placeholder="+38 (XXX) XXX XX XX">
+								</span>
+							</div>
+							<input type="hidden" name="url">
+							<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+							<div class="form__button-holder">
+								<button class="button button--main" type="submit">
+									Contact me
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 
