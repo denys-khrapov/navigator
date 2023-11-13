@@ -936,13 +936,14 @@
 	display: flex;
 	align-items: center;
 	padding: 8px 0;
+	overflow-x: auto;
 	@media (min-width: $pc) {
 		min-height: 48px;
 	}
 	// .breadcrumbs__container
 	&__container {
 		padding: 0px 32px;
-		max-width: 100%;
+		// max-width: 100%;
 		@media (min-width: $pc) {
 			width: 100%;
 			max-width: $containerWidth + px;
@@ -963,6 +964,7 @@
 			font-weight: 600;
 			text-transform: uppercase;
 			line-height: 1.4;
+			white-space: nowrap;
 			a {
 				display: block;
 				color: var(--navigator-color-palette-amazon-resin-600);

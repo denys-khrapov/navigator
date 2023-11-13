@@ -43,3 +43,150 @@
 		}
 	}
 }
+.services-page {
+}
+
+.services-hero {
+	position: relative;
+	padding: 48px 0;
+
+	@media (min-width: $pc) {
+		padding: 128px 0;
+	}
+	.quote {
+		// .quote__inner
+		&__inner {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 24px;
+			row-gap: 8px;
+		}
+		// .quote__header
+		&__header {
+			width: 100%;
+			max-width: 224px;
+			min-width: 224px;
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+		// .quote__author
+		&__author {
+		}
+		// .quote__name
+		&__name {
+		}
+		// .quote__position
+		&__position {
+		}
+		// .quote__text-holder
+		&__text-holder {
+		}
+		// .quote__image-holder
+		&__image-holder {
+		}
+	}
+	// .services-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		& > .services-hero__quote {
+			@media (min-width: $pc) {
+				display: none;
+			}
+		}
+	}
+	// .services-hero__content
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 48px;
+		@media (min-width: $pc) {
+			column-gap: 124px;
+			align-items: center;
+		}
+	}
+	// .services-hero__left-col
+	&__left-col {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+		min-width: 256px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			flex: none;
+			width: 100%;
+			max-width: 476px;
+			row-gap: 32px;
+		}
+	}
+	// .services-hero__title
+	&__title {
+		color: var(--navigator-color-palette-amazon-resin-source);
+		font-size: 31px;
+		line-height: 1.3;
+		@media (min-width: $pc) {
+			font-size: 49px;
+		}
+	}
+	// .services-hero__text-holder
+	&__text-holder {
+	}
+	// .services-hero__subtitle
+	&__subtitle {
+	}
+	// .services-hero__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+	}
+	// .services-hero__right-col
+	&__right-col {
+		position: relative;
+		@media (min-width: $pc) {
+			width: 100%;
+			max-width: 576px;
+			.quote {
+				position: absolute;
+				bottom: 20px;
+				left: -64px;
+				max-width: 440px;
+				&__inner {
+					row-gap: 24px;
+				}
+				&__author {
+					row-gap: 4px;
+				}
+			}
+		}
+	}
+	// .services-hero__image-holder
+	&__image-holder {
+		@media (min-width: $pc) {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	// .services-hero__quote
+	&__quote {
+	}
+	.text-block {
+	}
+
+	.button {
+		// .button--main
+		&--main {
+		}
+		// .button--secondary
+		&--secondary {
+		}
+	}
+}
