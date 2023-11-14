@@ -286,3 +286,147 @@
 		}
 	}
 }
+
+.offer {
+	padding: 64px 0;
+	@media (min-width: $pc) {
+		padding: 128px 0;
+	}
+	// .offer__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		@media (min-width: $pc) {
+			row-gap: 64px;
+		}
+	}
+	// .offer__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		row-gap: 4px;
+		@media (min-width: $pc) {
+			row-gap: 8px;
+		}
+	}
+	// .offer__subtitle
+	&__subtitle {
+	}
+	// .offer__title
+	&__title {
+	}
+	// .offer__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 48px;
+		@media (min-width: $pc) {
+			column-gap: 124px;
+			justify-content: space-between;
+		}
+	}
+	// .offer__content
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		min-width: 256px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			gap: 24px;
+			flex: none;
+			width: 100%;
+			max-width: 676px;
+		}
+	}
+	// .offer__left-col
+	&__left-col {
+		min-width: 256px;
+		flex: 1 0 0;
+		@media (min-width: $pc) {
+			flex: none;
+			width: 100%;
+			max-width: 376px;
+		}
+	}
+	// .offer__text-block
+	&__text-block {
+		position: relative;
+		padding: 0 24px;
+		&::after {
+			content: "";
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: var(--navigator-color-palette-amazon-skyline-100);
+		}
+	}
+	// .offer__badges
+	&__badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	// .offer__right-col
+	&__right-col {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+		min-width: 256px;
+		flex: 1 0 0;
+	}
+	// .offer__avatars-links
+	&__avatars-links {
+	}
+	// .offer__text-holder
+	&__text-holder {
+	}
+	// .offer__badge
+	&__badge {
+		border-radius: 99px;
+		background: var(--additional-colors-light-green);
+		padding: 2px 6px;
+		color: var(--additional-colors-100-green);
+		font-size: 13px;
+		flex-shrink: 0;
+		&::before {
+			font-size: 12px;
+		}
+	}
+	// .offer__image
+	&__image {
+	}
+	// .offer__image-holder
+	&__image-holder {
+		@media (min-width: $pc) {
+			width: 376px;
+			height: 408px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.text-block {
+		// .text-block__text-holder
+		&__text-holder {
+		}
+	}
+	.avatars-links {
+		// .avatars-links__link
+		&__link {
+		}
+		// .avatars-links__avatars
+		&__avatars {
+		}
+	}
+
+	.badge {
+	}
+}
