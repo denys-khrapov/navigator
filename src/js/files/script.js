@@ -48,6 +48,30 @@ jQuery(document).ready(function ($) {
          },
       });
 
+		let swiperBenefits = new Swiper(".slider-benefits", {
+         slidesPerView: 'auto',
+         spaceBetween: 32,
+         loop: false,
+	      pagination: {
+				el: ".benefits-swiper-pagination",
+			 },
+			 navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			 },
+
+         breakpoints: {
+            1280: {
+               spaceBetween: 48,
+					pagination: false,
+					scrollbar: {
+						el: '.swiper-scrollbar',
+						draggable: true,
+					 },
+            }
+         },
+      });
+
 		let swiperCases = new Swiper(".slider-cases", {
          slidesPerView: 'auto',
          spaceBetween: 16,
