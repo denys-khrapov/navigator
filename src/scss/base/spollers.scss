@@ -114,6 +114,8 @@
 	flex-direction: column;
 	row-gap: 12px;
 	@media (min-width: $pc) {
-		display: none;
+		.header & {
+			display: none;
+		}
 	}
 }

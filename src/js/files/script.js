@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
    }
 
 	function initSubmenu() {
-		$(".spollers__title").click(function () {
+		$(".header .spollers__title").click(function () {
 		if ($(window).width() >= 1280){
 			if ($(".submenu").hasClass("show")) {
 				$(".submenu").removeClass("show");
