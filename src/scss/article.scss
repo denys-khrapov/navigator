@@ -1,15 +1,5 @@
 //==== Article styles=============================================================================================
 .article-page {
-	.two-column {
-		// .two-column__container
-		&__container {
-		}
-		// .two-column__hero
-		&__hero {
-		}
-	}
-	.container {
-	}
 	.hero-two-column {
 		column-gap: 48px;
 		row-gap: 24px;
@@ -65,15 +55,18 @@
 			gap: 8px;
 			flex-wrap: wrap;
 			@media (min-width: $pc) {
-				gap: 24px;
+				column-gap: 24px;
+				row-gap: 8px;
 			}
 		}
 	}
+
 	.slide-team {
 		width: 100%;
 		max-width: 276px;
 		background: transparent;
 		border: 0;
+		margin-right: 0;
 		// .slide-team__inner
 		&__inner {
 			flex-direction: row;
@@ -117,5 +110,19 @@
 			flex-direction: column;
 			text-align: left;
 		}
+	}
+
+	.sidebar-content {
+		&:not(:last-child) {
+			margin-bottom: 64px;
+		}
+		@media (min-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: 128px;
+			}
+		}
+	}
+	.sidebar__header {
+		row-gap: 32px;
 	}
 }

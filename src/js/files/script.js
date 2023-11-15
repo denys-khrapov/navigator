@@ -409,6 +409,141 @@ if (contactBtnMobile) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+	const copyLinkButton = document.getElementById("copyLinkButton");
+
+	if(copyLinkButton){
+		copyLinkButton.addEventListener("click", (event) => {
+			// Получение URL из data-атрибута
+			const urlToCopy = event.currentTarget.getAttribute('data-href');
+			
+			// Создание временного input для копирования
+			const sysInput = document.createElement('input');
+			sysInput.value = urlToCopy;
+			document.body.appendChild(sysInput);
+			sysInput.select();
+			document.execCommand("copy");
+			document.body.removeChild(sysInput);
+	  });
+	  
+	}
+
+
+
+
+
+
+
+
+
+// Функция для проверки, находится ли элемент в середине экрана
+function isElementInViewport(el) {
+	const rect = el.getBoundingClientRect();
+	return (
+	  rect.top < window.innerHeight * 0.20 &&
+	  rect.bottom > window.innerHeight * 0.20
+	);
+}
+ 
+ // Функция для обновления класса active
+ function setActiveLink() {
+	// Находим все заголовки в правой колонке
+	const titles = document.querySelectorAll('.sidebar-content__right-col .sidebar-content__title');
+	// Находим все ссылки в сайдбаре
+	const links = document.querySelectorAll('.sidebar__links .sidebar__link');
+ 
+	titles.forEach((title, index) => {
+	  if (isElementInViewport(title)) {
+		 // Удаляем класс active со всех ссылок
+		 links.forEach(link => link.classList.remove('_active'));
+		 // Добавляем класс active к соответствующей ссылке
+		 links[index].classList.add('_active');
+	  }
+	});
+ }
+ 
+ // Добавляем обработчик события прокрутки
+ window.addEventListener('scroll', setActiveLink);
+ 
+
+
+
+
+
+
+
+
+
+
+// Функция для получения высоты шапки
+function getHeaderHeight() {
+	const header = document.querySelector('.fixed-header');
+	return header ? header.offsetHeight : 0; // Возвращаем 0, если шапка не найдена
+}
+
+// Функция для плавного скроллинга с учетом высоты шапки
+function scrollToAnchor(id) {
+	// Проверяем, что ID существует и не равен просто '#'
+	if (!id || id === '#') return; // Если ID не передан или недействителен, выходим из функции
+
+	const headerHeight = getHeaderHeight(); // Получаем высоту шапки
+	const anchor = document.querySelector(id);
+	
+	if (anchor) {
+		 const anchorPosition = anchor.getBoundingClientRect().top + window.pageYOffset;
+		 const offsetPosition = anchorPosition - headerHeight;
+		 
+		 window.scrollTo({
+			  top: offsetPosition,
+			  behavior: 'smooth'
+		 });
+	}
+}
+
+// Переопределение стандартного поведения при клике на ссылки якоря
+document.querySelectorAll('.sidebar__link').forEach(link => {
+	link.addEventListener('click', function(e) {
+		 e.preventDefault();
+		 const href = this.getAttribute('href');
+		 // Проверяем, что href не пуст, начинается с # и содержит символы после #
+		 if (href && href.startsWith('#') && href.length > 1) {
+			  scrollToAnchor(href);
+		 }
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 	let players = document.querySelectorAll('.audioPlayer');
 	

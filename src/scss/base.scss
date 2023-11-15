@@ -57,6 +57,9 @@
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+}
 // Шаблони (заготівлі)
 // @extend %ім'я шаблону;
 // Сніппет (SCSS): ex
