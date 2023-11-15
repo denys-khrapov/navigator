@@ -17,8 +17,7 @@
 	cursor: pointer;
 	text-align: left;
 	position: relative;
-	list-style: none;
-
+	display: block;
 	@media (min-width: $pc) {
 		display: flex;
 		align-items: center;
@@ -35,12 +34,6 @@
 		}
 	}
 
-	&::marker {
-		display: none !important;
-	}
-	::-webkit-details-marker {
-		display: none !important;
-	}
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
@@ -105,7 +98,9 @@
 		*/
 	}
 }
-
+summary::-webkit-details-marker {
+	display: none !important;
+}
 // Контент спойлера
 .spollers__body {
 	padding-left: 24px;
@@ -118,4 +113,45 @@
 			display: none;
 		}
 	}
+}
+
+/* Стилизация для фона прогресс бара */
+progress {
+	// /* Стилизация фона */
+	// width: 100%; /* Полная ширина контейнера */
+	// height: 20px; /* Высота прогресс бара */
+	background-color: yellow;
+}
+
+/* Стилизация для всех браузеров с использованием вендорных префиксов */
+progress[value]::-webkit-progress-bar {
+	background-color: #eee; /* Цвет фона прогресс бара */
+}
+
+progress[value]::-webkit-progress-value {
+	background-color: red; /* Цвет заполнения прогресс бара */
+}
+
+progress[value]::-moz-progress-bar {
+	background-color: red;
+}
+
+/* Стилизация для Internet Explorer */
+progress[value]::-ms-fill {
+	background-color: red; /* Цвет заполнения прогресс бара */
+	border: none; /* Удаление границы для IE10 */
+}
+
+/* Стилизация фона прогресс бара */
+progress[value]::-webkit-progress-bar {
+	background-color: black; /* Цвет фона для Chrome и Safari */
+}
+
+progress[value]::-moz-progress-bar {
+	/* Для Firefox необходимо использовать другой псевдо-элемент */
+	background-color: black; /* Стандартный фоновый цвет, если вы хотите его сбросить */
+}
+
+progress[value] {
+	background-color: black; /* Цвет фона для IE */
 }

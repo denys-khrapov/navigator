@@ -11,6 +11,8 @@ jQuery(document).ready(function ($) {
 	initSearch();
 	initSocialWidget();
 
+
+	 
 	function initSwiper() {
       let swiperClients = new Swiper(".slider-clients", {
          slidesPerView: 'auto',
@@ -203,63 +205,113 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
 document.addEventListener('DOMContentLoaded', function() {
-	let players = document.querySelectorAll('.audioPlayer');
+	
+	// let players = document.querySelectorAll('.audioPlayer');
  
-	function pauseAllOtherAudios(currentAudio) {
-	  players.forEach(function(player) {
-		 let audio = player.querySelector('.audioElement');
-		 if (audio !== currentAudio) {
-			audio.pause();
-			audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.add("_icon-Play");
-			audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.remove("_icon-Pause");
-		 }
-	  });
-	}
+	// function pauseAllOtherAudios(currentAudio) {
+	//   players.forEach(function(player) {
+	// 	 let audio = player.querySelector('.audioElement');
+	// 	 if (audio !== currentAudio) {
+	// 		audio.pause();
+	// 		audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.add("_icon-Play");
+	// 		audio.closest('.audioPlayer').querySelector('.playPauseButton').classList.remove("_icon-Pause");
+	// 	 }
+	//   });
+	// }
  
-	players.forEach(function(player) {
-	  let durationDisplay = player.querySelector('.durationDisplay');
-	  let audio = player.querySelector('.audioElement');
-	  let playPauseButton = player.querySelector('.playPauseButton');
+	// players.forEach(function(player) {
+	//   let durationDisplay = player.querySelector('.durationDisplay');
+	//   let audio = player.querySelector('.audioElement');
+	//   let playPauseButton = player.querySelector('.playPauseButton');
+
+
+
+
+	//   let progressBar = player.querySelector('.progress-bar');
+
+
+
+
 	 
-	  if (durationDisplay && audio && playPauseButton) {
-		 function formatTime(seconds) {
-			let hours = Math.floor(seconds / 3600);
-			let minutes = Math.floor((seconds % 3600) / 60);
-			let secs = Math.floor(seconds % 60);
+	//   if (durationDisplay && audio && playPauseButton) {
+	// 	 function formatTime(seconds) {
+	// 		let hours = Math.floor(seconds / 3600);
+	// 		let minutes = Math.floor((seconds % 3600) / 60);
+	// 		let secs = Math.floor(seconds % 60);
 	  
-			return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-		 }
+	// 		return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+	// 	 }
 	  
-		 function updateDurationDisplay() {
-			if (!audio.paused) {
-			  durationDisplay.textContent = formatTime(audio.currentTime);
-			} else {
-			  durationDisplay.textContent = formatTime(audio.duration);
-			}
-		 }
+	// 	 function updateDurationDisplay() {
+	// 		if (!audio.paused) {
+	// 		  durationDisplay.textContent = formatTime(audio.currentTime);
+	// 		} else {
+	// 		  durationDisplay.textContent = formatTime(audio.duration);
+	// 		}
+	// 	 }
 	  
-		 if (audio.readyState > 0) {
-			updateDurationDisplay();
-		 } else {
-			audio.onloadedmetadata = updateDurationDisplay;
-		 }
+	// 	 if (audio.readyState > 0) {
+	// 		updateDurationDisplay();
+	// 	 } else {
+	// 		audio.onloadedmetadata = updateDurationDisplay;
+	// 	 }
 	  
-		 audio.addEventListener('timeupdate', updateDurationDisplay);
+	// 	 audio.addEventListener('timeupdate', updateDurationDisplay);
 	  
-		 playPauseButton.onclick = function() {
-			if (audio.paused) {
-			  pauseAllOtherAudios(audio); // Пауза всех других аудио перед воспроизведением
-			  audio.play().catch(e => console.error('Play failed:', e));
-			  this.classList.remove("_icon-Play");
-			  this.classList.add("_icon-Pause");
-			} else {
-			  audio.pause();
-			  this.classList.add("_icon-Play");
-			  this.classList.remove("_icon-Pause");
-			}
-		 };
-	  }
-	});rating
+	// 	 playPauseButton.onclick = function() {
+	// 		if (audio.paused) {
+	// 		  pauseAllOtherAudios(audio); // Пауза всех других аудио перед воспроизведением
+	// 		  audio.play().catch(e => console.error('Play failed:', e));
+	// 		  this.classList.remove("_icon-Play");
+	// 		  this.classList.add("_icon-Pause");
+	// 		} else {
+	// 		  audio.pause();
+	// 		  this.classList.add("_icon-Play");
+	// 		  this.classList.remove("_icon-Pause");
+	// 		}
+	// 	 };
+	//   }
+
+	// //   audio.addEventListener('timeupdate', function() {
+	// // 	let progress = (audio.currentTime / audio.duration) * 100;
+	// // 	document.querySelector('.progress-bar').value = progress;
+	// //  });
+
+	// audio.addEventListener('timeupdate', function() {
+	// 	let progress = (audio.currentTime / audio.duration) * 100;
+	// 	progressBar.value = progress;
+	//  });
+
+	//  progressBar.addEventListener('click', function(e) {
+	// 	// Рассчитываем новое время воспроизведения, исходя из места клика
+	// 	let clickPosition = (e.pageX - this.offsetLeft) / this.offsetWidth;
+	// 	let newTime = clickPosition * audio.duration;
+  
+	// 	// Устанавливаем новое время воспроизведения для аудио элемента
+	// 	audio.currentTime = newTime;
+	//  });
+
+
+
+
+
+	//  document.querySelector('.mute-button').addEventListener('click', function() {
+	// 	audio.muted = !audio.muted;
+	// 	this.textContent = audio.muted ? 'Unmute' : 'Mute';
+	//  });
+	//  document.querySelector('.speed-button').addEventListener('click', function() {
+	// 	let newPlaybackRate = audio.playbackRate == 1 ? 2 : 1;
+	// 	audio.playbackRate = newPlaybackRate;
+	// 	this.textContent = newPlaybackRate == 1 ? 'x2 Speed' : 'Normal Speed';
+	//  });
+	// });
+
+
+
+	 
+	 
+	 
+	// rating
 
 
 
@@ -350,3 +402,112 @@ if (contactBtnMobile) {
 	  })
  })
 
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+	let players = document.querySelectorAll('.audioPlayer');
+	
+	function pauseAllOtherAudios(currentAudio) {
+	  players.forEach(function(player) {
+		 let audio = player.querySelector('.audioElement');
+		 if (audio !== currentAudio) {
+			audio.pause();
+			let playPauseButton = audio.closest('.audioPlayer').querySelector('.playPauseButton');
+			if (playPauseButton) {
+			  playPauseButton.classList.add("_icon-Play");
+			  playPauseButton.classList.remove("_icon-Pause");
+			}
+		 }
+	  });
+	}
+	
+	players.forEach(function(player) {
+	  let durationDisplay = player.querySelector('.durationDisplay');
+	  let audio = player.querySelector('.audioElement');
+	  let playPauseButton = player.querySelector('.playPauseButton');
+	  let progressBar = player.querySelector('.progress-bar');
+	  let muteButton = player.querySelector('.mute-button');
+	  let speedButton = player.querySelector('.speed-button');
+	  
+	  if (audio) {
+		 function formatTime(seconds) {
+			let hours = Math.floor(seconds / 3600);
+			let minutes = Math.floor((seconds % 3600) / 60);
+			let secs = Math.floor(seconds % 60);
+	  
+			return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+		 }
+	  
+		 function updateDurationDisplay() {
+			if (!audio.paused) {
+			  if (durationDisplay) {
+				 durationDisplay.textContent = formatTime(audio.currentTime);
+			  }
+			} else {
+			  if (durationDisplay) {
+				 durationDisplay.textContent = formatTime(audio.duration);
+			  }
+			}
+		 }
+	  
+		 if (audio.readyState > 0) {
+			updateDurationDisplay();
+		 } else {
+			audio.onloadedmetadata = updateDurationDisplay;
+		 }
+	  
+		 audio.addEventListener('timeupdate', updateDurationDisplay);
+	  
+		 if (playPauseButton) {
+			playPauseButton.onclick = function() {
+			  if (audio.paused) {
+				 pauseAllOtherAudios(audio);
+				 audio.play().catch(e => console.error('Play failed:', e));
+				 this.classList.remove("_icon-Play");
+				 this.classList.add("_icon-Pause");
+			  } else {
+				 audio.pause();
+				 this.classList.add("_icon-Play");
+				 this.classList.remove("_icon-Pause");
+			  }
+			};
+		 }
+	  
+		 if (progressBar) {
+			audio.addEventListener('timeupdate', function() {
+			  let progress = (audio.currentTime / audio.duration) * 100;
+			  progressBar.value = progress;
+			});
+			
+			progressBar.addEventListener('click', function(e) {
+			  let rect = this.getBoundingClientRect();
+			  let clickPosition = (e.pageX - window.scrollX - rect.left) / rect.width;
+			  audio.currentTime = clickPosition * audio.duration;
+			});
+		 }
+	  
+		 if (muteButton) {
+			muteButton.addEventListener('click', function() {
+			  audio.muted = !audio.muted;
+			  this.textContent = audio.muted ? 'Unmute' : 'Mute';
+			});
+		 }
+	  
+		 if (speedButton) {
+			speedButton.addEventListener('click', function() {
+			  let newPlaybackRate = audio.playbackRate == 1 ? 2 : 1;
+			  audio.playbackRate = newPlaybackRate;
+			  this.textContent = newPlaybackRate == 1 ? 'x2 Speed' : 'Normal Speed';
+			});
+		 }
+	  } else {
+		 console.error('Audio element is not found in the player:', player);
+	  }
+	});
+ });
+ 
