@@ -1,0 +1,121 @@
+//==== Article styles=============================================================================================
+.article-page {
+	.two-column {
+		// .two-column__container
+		&__container {
+		}
+		// .two-column__hero
+		&__hero {
+		}
+	}
+	.container {
+	}
+	.hero-two-column {
+		column-gap: 48px;
+		row-gap: 24px;
+		@media (min-width: $pc) {
+			column-gap: 24px;
+		}
+		// .hero-two-column__left-col
+		&__left-col {
+			@media (min-width: $pc) {
+				flex: none;
+			}
+		}
+		// .hero-two-column__image-holder
+		&__image-holder {
+			max-width: 100%;
+			height: 476px;
+			@media (min-width: $pc) {
+				max-width: 476px;
+				height: 576px;
+			}
+		}
+		// .hero-two-column__right-col
+		&__right-col {
+		}
+		// .hero-two-column__text-block
+		&__text-block {
+		}
+		// .hero-two-column__description
+		&__description {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+			&::before {
+				top: unset;
+				bottom: -16px;
+			}
+			@media (min-width: $pc) {
+				&::before {
+					display: block;
+				}
+			}
+		}
+		// .hero-two-column__title
+		&__title {
+		}
+		// .hero-two-column__text-holder
+		&__text-holder {
+			color: var(--navigator-color-palette-amazon-skyline-500);
+		}
+		// .hero-two-column__profile-holder
+		&__profile-holder {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			@media (min-width: $pc) {
+				gap: 24px;
+			}
+		}
+	}
+	.slide-team {
+		width: 100%;
+		max-width: 276px;
+		background: transparent;
+		border: 0;
+		// .slide-team__inner
+		&__inner {
+			flex-direction: row;
+			min-height: 70px;
+			gap: 8px;
+			@media (min-width: $pc) {
+				padding: 16px;
+			}
+		}
+		// .slide-team__image-holder
+		&__image-holder {
+			width: 32px;
+			height: 32px;
+			@media (min-width: $pc) {
+				width: 48px;
+				height: 48px;
+			}
+		}
+		// .slide-team__name
+		&__name {
+			font-size: 16px;
+			line-height: 1.7;
+			@media (min-width: $pc) {
+				font-size: 20px;
+				line-height: 1.5;
+				text-transform: capitalize;
+			}
+		}
+		// .slide-team__position
+		&__position {
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+		}
+		// .slide-team__link
+		&__link {
+		}
+		// .slide-team__text-block
+		&__text-block {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+		}
+	}
+}
