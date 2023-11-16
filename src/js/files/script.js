@@ -441,8 +441,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function isElementInViewport(el) {
 	const rect = el.getBoundingClientRect();
 	return (
-	  rect.top < window.innerHeight * 0.20 &&
-	  rect.bottom > window.innerHeight * 0.20
+	  rect.top < window.innerHeight * 0.5 &&
+	  rect.bottom > window.innerHeight * 0.5
 	);
 }
  
@@ -545,29 +545,30 @@ document.querySelectorAll('.sidebar__link').forEach(link => {
 
 
   
-	let players = document.querySelectorAll('.audioPlayer');
-	
-	function pauseAllOtherAudios(currentAudio) {
-	  players.forEach(function(player) {
-		 let audio = player.querySelector('.audioElement');
-		 if (audio !== currentAudio) {
-			audio.pause();
-			let playPauseButton = audio.closest('.audioPlayer').querySelector('.playPauseButton');
-			if (playPauseButton) {
-			  playPauseButton.classList.add("_icon-Play");
-			  playPauseButton.classList.remove("_icon-Pause");
-			}
-		 }
-	  });
-	}
+let players = document.querySelectorAll('.audio-wrapper');
+
+function pauseAllOtherAudios(currentAudio) {
+    players.forEach(function(player) {
+        let audio = player.querySelector('.audioElement');
+        if (audio !== currentAudio) {
+            audio.pause();
+            let playPauseButton = audio.closest('.audioPlayer').querySelector('.playPauseButton');
+            if (playPauseButton) {
+                playPauseButton.classList.add("_icon-Play");
+                playPauseButton.classList.remove("_icon-Pause");
+            }
+        }
+    });
+}
 	
 	players.forEach(function(player) {
-	  let durationDisplay = player.querySelector('.durationDisplay');
-	  let audio = player.querySelector('.audioElement');
-	  let playPauseButton = player.querySelector('.playPauseButton');
-	  let progressBar = player.querySelector('.progress-bar');
-	  let muteButton = player.querySelector('.mute-button');
-	  let speedButton = player.querySelector('.speed-button');
+		let audioPlayer = player.querySelector('.audioPlayer');
+		let durationDisplay = audioPlayer.querySelector('.durationDisplay');
+		let audio = audioPlayer.querySelector('.audioElement');
+		let playPauseButton = audioPlayer.querySelector('.playPauseButton');
+		let progressBar = player.querySelector('.progress-bar');
+		let muteButton = player.querySelector('.mute-button');
+		let speedButton = player.querySelector('.speed-button');
 	  
 	  if (audio) {
 		 function formatTime(seconds) {
@@ -630,6 +631,14 @@ document.querySelectorAll('.sidebar__link').forEach(link => {
 			muteButton.addEventListener('click', function() {
 			  audio.muted = !audio.muted;
 			  this.textContent = audio.muted ? 'Unmute' : 'Mute';
+
+			  if (audio.muted) {
+            this.classList.remove('_icon-SpeakerSimpleHigh');
+            this.classList.add('_icon-SpeakerSimpleX');
+        } else {
+            this.classList.add('_icon-SpeakerSimpleHigh');
+            this.classList.remove('_icon-SpeakerSimpleX');
+        }
 			});
 		 }
 	  
@@ -644,5 +653,10 @@ document.querySelectorAll('.sidebar__link').forEach(link => {
 		 console.error('Audio element is not found in the player:', player);
 	  }
 	});
+
+
+
+
+
  });
  

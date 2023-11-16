@@ -2366,7 +2366,11 @@
 		}
 	}
 }
-
+.audio-wrapper {
+	&:not(:last-child) {
+		margin-bottom: 24px;
+	}
+}
 .audio-holder {
 	border-radius: 99px;
 	border: 1px solid var(--additional-colors-100-white);
@@ -2377,9 +2381,6 @@
 	padding: 13.5px 21px 13.5px 16px;
 	width: 100%;
 	max-width: 125px;
-	&:not(:last-child) {
-		margin-bottom: 24px;
-	}
 }
 
 .audio {
