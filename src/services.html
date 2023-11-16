@@ -666,10 +666,12 @@
 															Kfir
 															Abud</a>
 													</div>
-													<div class="audio-holder audio audioPlayer">
-														<audio class="audioElement" src="files/audio.mp3"></audio>
-														<button class="playPauseButton _icon-Play"></button>
-														<div class="audio__time durationDisplay">loading...</div>
+													<div class="audio-wrapper">
+														<div class="audio-holder audio audioPlayer">
+															<audio class="audioElement" src="files/audio.mp3"></audio>
+															<button class="playPauseButton _icon-Play"></button>
+															<div class="audio__time durationDisplay">loading...</div>
+														</div>
 													</div>
 												</div>
 												<a href="#" class="slide-news-podcast__link link _icon-CaretRight">Learn more</a>
@@ -692,6 +694,8 @@
 		</main>
 		@@include('html/_footer.htm',{})
 		@@include('html/_social-widget.htm',{})
+		@@include('html/_modal.htm',{})
+
 	</div>
 	@@include('html/_js.htm',{})
 </body>

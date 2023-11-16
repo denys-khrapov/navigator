@@ -6,6 +6,7 @@
 
 <body>
 	<div class="wrapper">
+
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<div class="team-page">
@@ -182,14 +183,14 @@
 									</p>
 								</div>
 								<h5 class="card-cta__subtitle">Join us, and together, we will reach new heights!</h5>
-								<a class="button button--main" href="#">Join the team</a>
+								<a class="button button--main" data-fancybox data-src="#modal-contact-2"
+									href="javascript:;">Join the team</a>
 							</div>
 						</div>
 					</div>
 					<div class="cta-img__bg-holder bg-holder parallax" style="background-image: url('@img/cta-img-bg.jpg');">
 					</div>
 				</section>
-
 				<section class="news-podcast" id="news-podcast-section">
 					<div class="news-podcast__container container">
 						<div class="news-podcast__header header-news-podcast">
@@ -329,10 +330,12 @@
 															Kfir
 															Abud</a>
 													</div>
-													<div class="audio-holder audio audioPlayer">
-														<audio class="audioElement" src="files/audio.mp3"></audio>
-														<button class="playPauseButton _icon-Play"></button>
-														<div class="audio__time durationDisplay">loading...</div>
+													<div class="audio-wrapper">
+														<div class="audio-holder audio audioPlayer">
+															<audio class="audioElement" src="files/audio.mp3"></audio>
+															<button class="playPauseButton _icon-Play"></button>
+															<div class="audio__time durationDisplay">loading...</div>
+														</div>
 													</div>
 												</div>
 												<a href="#" class="slide-news-podcast__link link _icon-CaretRight">Learn more</a>
@@ -355,6 +358,81 @@
 		</main>
 		@@include('html/_footer.htm',{})
 		@@include('html/_social-widget.htm',{})
+		@@include('html/_modal.htm',{})
+		<div style="display: none;" id="modal-contact-2" class="modal-contact">
+			<div class="modal-contact__inner">
+				<div class="modal-contact__header">
+					<h2 class="modal-contact__title">Send a request to be added to the team</h2>
+					<div class="modal-contact__text-holder">
+						<p>Please leave your contact information, and our Amazon marketing expert will get in touch with you
+							shortly to discuss your needs and develop a success strategy.</p>
+					</div>
+				</div>
+				<div class="modal-contact__form-holder">
+					<div id="note3"></div>
+					<form class="form form--full" id="ajax-contact-form" data-form-validate="true">
+						<div class="form__inner">
+							<div class="form__input-holder form__input-holder--name">
+								<span>
+									<label for="fname">Your name</label>
+									<input id="fname" type="text" value="" name="name-client" placeholder="ex. Michael Smith"
+										required>
+								</span>
+							</div>
+							<div class="form__input-holder form__input-holder--email">
+								<span>
+									<label for="email">Your email</label>
+									<input id="email" type="text" value="" name="email-client" placeholder="name@gmail.com"
+										required>
+								</span>
+							</div>
+							<div class="form__input-holder form__input-holder--phone">
+								<span>
+									<label for="phone">Your phone</label>
+									<input id="phone" type="tel" value="" name="phone-client" placeholder="+38 (XXX) XXX XX XX">
+								</span>
+							</div>
+							<input type="hidden" name="url">
+							<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+							<div class="form__button-holder">
+								<button class="button button--main" type="submit">
+									Contact me
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div style="display: none;" id="modal-thk-4" class="modal-thk">
+			<div class="modal-thk__inner">
+				<div class="modal-thk__icon-holder">
+					<span class="_icon-Bell"></span>
+				</div>
+				<div class="modal-thk__content content-modal-thk">
+					<div class="content-modal-thk__left-col">
+						<h3 class="content-modal-thk__title">Thank you for submitting your job application to our company!
+						</h3>
+						<h4 class="content-modal-thk__subtitle">We appreciate your interest in our team and your willingness
+							to join us. Your application has been successfully sent.</h4>
+					</div>
+					<div class="content-modal-thk__right-col">
+						<div class="content-modal-thk__text-holder">
+							<p>We will carefully review your information and get in touch with you shortly if your
+								qualifications align with the job requirements. Please keep an eye on your email and expect our
+								notification.</p>
+							<p>If you have any further questions or would like to clarify any information, please don't
+								hesitate to contact us. We are always ready to address your inquiries.</p>
+							<p>Once again, thank you for your interest in our company. We look forward to a successful
+								collaboration in the future!"</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-thk__close">
+					<span class="_icon-Minus"></span>
+				</div>
+			</div>
+		</div>
 	</div>
 	@@include('html/_js.htm',{})
 </body>
