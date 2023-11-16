@@ -1,5 +1,11 @@
 //==== Article styles=============================================================================================
 .article-page {
+	.two-column {
+		padding: 64px 0 32px;
+		@media (min-width: $pc) {
+			padding: 64px 0;
+		}
+	}
 	.hero-two-column {
 		column-gap: 48px;
 		row-gap: 24px;
@@ -57,8 +63,8 @@
 		&__text-holder {
 			color: var(--navigator-color-palette-amazon-skyline-500);
 		}
-		// .hero-two-column__profile-holder
-		&__profile-holder {
+		// .hero-two-column__profile-content
+		&__profile-content {
 			display: flex;
 			gap: 8px;
 			flex-wrap: wrap;
@@ -300,6 +306,8 @@
 				width: fit-content;
 				padding-top: 1px;
 				padding-bottom: 1px;
+				transition: color 0.3s ease 0s;
+
 				&::after {
 					position: absolute;
 					top: 50%;
